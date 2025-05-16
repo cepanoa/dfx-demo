@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DFX Messenger 测试</title>
+  <!-- 引入 Dialogflow Messenger 的样式和脚本 -->
+  <link rel="stylesheet"
+        href="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js"></script>
+  <style>
+    /* 可选：调整聊天窗口的位置、大小、主题色 */
+    df-messenger {
+      --df-messenger-bot-message: #ffffff;
+      --df-messenger-user-message: #d3e3fd;
+      --df-messenger-font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>本地测试 Dialogflow CX Messenger</h1>
+  <p>在右下角可以看到聊天窗口。</p>
+
+  <!-- 下面这段代码就是嵌入点 -->
+  <df-messenger
+    intent="Default Welcome Intent"
+    chat-title="Companion"
+    agent-id="YOUR_AGENT_ID"
+    language-code="en"
+  ></df-messenger>
+</body>
+</html>
