@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DFX Messenger 测试</title>
-  <!-- 引入 Dialogflow Messenger 的样式和脚本 -->
+  <title>Companion MVP</title>
   <link rel="stylesheet"
-        href="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.css">
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js"></script>
+        href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
   <style>
-    /* 可选：调整聊天窗口的位置、大小、主题色 */
     df-messenger {
-      --df-messenger-bot-message: #ffffff;
-      --df-messenger-user-message: #d3e3fd;
-      --df-messenger-font-family: 'Arial', sans-serif;
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 16px;
+      right: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>本地测试 Dialogflow CX Messenger</h1>
-  <p>在右下角可以看到聊天窗口。</p>
+  <h1>Dialogflow CX Messenger Demo</h1>
+  <p>Chat widget should appear in the lower right.</p>
 
-  <!-- 下面这段代码就是嵌入点 -->
   <df-messenger
-    intent="Default Welcome Intent"
-    chat-title="Companion"
-    agent-id="YOUR_AGENT_ID"
+    location="us-central1"
+    project-id="cepanoa"
+    agent-id="4dbcd653-bfc8-43d2-a6f2-8ba198510ad0"
     language-code="en"
-  ></df-messenger>
+    max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="Companion MVP"></df-messenger-chat-bubble>
+  </df-messenger>
 </body>
 </html>
+
+
