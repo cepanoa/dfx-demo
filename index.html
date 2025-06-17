@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
 <df-messenger
   location="us-central1"
   project-id="cepanoa"
@@ -5,9 +8,8 @@
   language-code="en"
   max-query-length="-1"
   chat-title="CBI™ Guide"
-  welcome-message="Hi there! I’m your companion for healing and health optimization. Ask me about your ACEs, biomarkers, or trauma healing path.">
-  <df-messenger-chat-bubble
-    chat-title="CBI™ Guide">
+  welcome-message="Welcome! I'm your companion for healing and health optimization. Ask me anything about ACEs, trauma, or your biomarkers.">
+  <df-messenger-chat-bubble chat-title="CBI™ Guide">
   </df-messenger-chat-bubble>
 </df-messenger>
 
@@ -18,21 +20,19 @@
     bottom: 16px;
     right: 16px;
 
-    /* Visual Customization */
     --df-messenger-font-family: "Google Sans", sans-serif;
     --df-messenger-font-color: #000000;
-    --df-messenger-chat-background: #f3f6fc;
-    --df-messenger-message-user-background: #d3e3fd;
-    --df-messenger-message-bot-background: #ffffff;
-    --df-messenger-button-titlebar-color: #0f5d47; /* Deep green like the image */
-    --df-messenger-send-icon: #0f5d47;
+    --df-messenger-chat-background: #ffffff;
+    --df-messenger-message-user-background: #0f5d47; 
+    --df-messenger-message-bot-background: #f3f6fc;  
+    --df-messenger-button-titlebar-color: #0f5d47;   
     --df-messenger-input-box-color: #ffffff;
     --df-messenger-input-placeholder-color: #999;
+    --df-messenger-send-icon: #0f5d47;
 
-    /* Optional: Rounded look */
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
   }
 
   df-messenger-chat-bubble {
