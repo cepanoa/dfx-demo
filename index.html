@@ -18,9 +18,9 @@
       --df-messenger-font-family: "Google Sans", sans-serif;
       --df-messenger-font-color: #000000;
       --df-messenger-chat-background: #ffffff;
-      --df-messenger-message-user-background: #0f5d47;
-      --df-messenger-message-bot-background: #f3f6fc;
-      --df-messenger-button-titlebar-color: #0f5d47;
+      --df-messenger-message-user-background: #0f5d47;      
+      --df-messenger-message-bot-background: #f3f6fc;      
+      --df-messenger-button-titlebar-color: #0f5d47;       
       --df-messenger-input-box-color: #ffffff;
       --df-messenger-input-placeholder-color: #999;
       --df-messenger-send-icon: #0f5d47;
@@ -33,10 +33,17 @@
     df-messenger-chat-bubble {
       --df-messenger-chat-bubble-color: #0f5d47;
     }
+
+    body {
+      margin: 0;
+      font-family: "Google Sans", sans-serif;
+      background-color: #f9f9f9;
+    }
   </style>
 </head>
-<body>
 
+<body>
+  <!-- Chatbot Component -->
   <df-messenger
     location="us-central1"
     project-id="cepanoa"
@@ -47,6 +54,5 @@
     welcome-message="Welcome! I'm your companion for healing and health optimization. Ask me anything about ACEs, trauma, or your biomarkers.">
     <df-messenger-chat-bubble chat-title="CBI™ Guide"></df-messenger-chat-bubble>
   </df-messenger>
-
 </body>
 </html>
